@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10101a"><meta name="description" content="RBLX Market — демо-маркетплейс для игровых предметов и обменов.">
+  <title>RBLX Market — игровые сделки и обмены</title><link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar">
+    <a class="brand" href="#home" aria-label="RBLX Market home"><span class="brand-mark">R</span><span>RBLX<span class="brand-light">MARKET</span></span></a>
+    <div class="side-label">WORKSPACE</div>
+    <nav class="nav-list" id="nav">
+      <button class="nav-item active" data-page="home"><span>⌂</span> Главная</button>
+      <button class="nav-item" data-page="market"><span>▦</span> Маркетплейс <i class="nav-dot"></i></button>
+      <button class="nav-item" data-page="trades"><span>⇄</span> Обмены</button>
+      <button class="nav-item" data-page="messages"><span>▤</span> Сообщения</button>
+      <button class="nav-item" data-page="support"><span>◉</span> Поддержка</button>
+      <button class="nav-item" data-page="news"><span>◷</span> Новости</button>
+    </nav>
+    <div class="side-label side-label-lower">ACCOUNT</div>
+    <nav class="nav-list">
+      <button class="nav-item" data-page="profile"><span>♙</span> Мой профиль</button>
+      <button class="nav-item hidden" id="adminNav" data-page="admin"><span>⬡</span> Админ-панель</button>
+    </nav>
+    <div class="sidebar-bottom"><div class="secure-pill"><span class="status-dot"></span><div><b>Демо-платформа</b><small>Тестовая экономика</small></div></div><div class="side-foot">RBLX MARKET <span>v3.0</span></div></div>
+  </aside>
+  <main class="main-area">
+    <header class="topbar"><button class="mobile-menu" id="mobileMenu" aria-label="Меню">☰</button><div class="breadcrumbs"><span>Workspace</span><b>/</b><strong id="pageCrumb">Главная</strong></div><div class="top-actions"><div class="balance-chip"><span>◈</span><div><small>Демо-баланс</small><b id="headerBalance">— ₽</b></div></div><button class="icon-button" id="themeBtn" title="Переключить оформление">◐</button><button class="user-chip" id="userChip"><span class="avatar mini" id="headerAvatar">?</span><span id="headerUsername">Гость</span><span class="chevron">⌄</span></button></div></header>
+    <div class="content" id="pageContent"></div>
+    <footer class="footer"><span>© 2026 RBLX Market</span><span>Неофициальный фанатский демо-проект. Не связан с Roblox Corporation.</span><span id="connectionStatus"><i class="status-dot"></i> Проверка сервера…</span></footer>
+  </main>
+</div>
+<div class="toast-region" id="toasts" aria-live="polite"></div>
+<div class="modal-backdrop hidden" id="authModal"><section class="modal auth-modal"><button class="modal-close" data-close="authModal">×</button><div class="modal-brand"><span class="brand-mark">R</span></div><h2 id="authTitle">С возвращением</h2><p class="muted" id="authSubtitle">Войди, чтобы управлять объявлениями и обменами.</p><div class="auth-tabs"><button class="selected" data-auth-mode="login">Войти</button><button data-auth-mode="register">Создать аккаунт</button></div><form id="authForm"><label id="usernameField" class="hidden">Никнейм<input name="username" minlength="3" maxlength="24" placeholder="Player_123" autocomplete="username"></label><label>Email<input name="email" type="email" required placeholder="you@example.com" autocomplete="email"></label><label>Пароль<input name="password" type="password" required minlength="8" placeholder="Минимум 8 символов" autocomplete="current-password"></label><button class="button primary full" type="submit" id="authSubmit">Войти в аккаунт <span>→</span></button><p class="form-note">Демо-проект: баланс виртуальный, реальные платежи отключены.</p></form></section></div>
+<script src="/app.js" defer></script>
+</body></html>
